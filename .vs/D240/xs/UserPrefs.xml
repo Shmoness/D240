@@ -1,7 +1,6 @@
 ﻿<Properties StartupConfiguration="{FD332EBF-5C2F-92BA-1CF2-1B4D140BEF4F}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/newcamerarotate.cs">
     <Files>
-      <File FileName="Assets/Script/CameraOrbit.cs" Line="41" Column="1" />
       <File FileName="Assets/Script/newcamerarotate.cs" Line="22" Column="21" />
     </Files>
     <Pads>
@@ -20,7 +19,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="889d1b49-a3db-4650-b863-c14c2190c822" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="627fb6fe-9ddd-4860-b895-5fecbdb9ada5" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
