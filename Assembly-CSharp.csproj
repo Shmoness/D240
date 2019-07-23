@@ -64,7 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\AnimatedState.cs" />
     <Compile Include="Assets\Script\AnimationTest.cs" />
-    <Compile Include="Assets\Script\CameraRotator.cs" />
+    <Compile Include="Assets\Script\newcamerarotate.cs" />
     <Compile Include="Assets\StateControl.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/ming/Documents/GitHub/D240/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
