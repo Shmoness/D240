@@ -98,7 +98,7 @@
         }
         if(Input.GetMouseButton(1))
         {
-            delY = Input.GetAxis("Mouse Y") * ySpeed * 0.01f;
+            delY = Input.GetAxis("Mouse Y") * ySpeed * 0.002f;
 
             //Vector3 position = new Vector3(transform.position.x, newY, transform.position.z);
             //transform.position = position;
