@@ -16,11 +16,18 @@
   
      public float distanceMin = 1f;
      public float distanceMax = 10f;
-  
+
+     public float maxPanY;
+     
      private Rigidbody rigidbody;
   
      float x = 0.0f;
      float y = 0.0f;
+
+     float delY = 0.0f;
+     float newY;
+     float topY;
+     float bottomY;
   
      // Use this for initialization
      void Start () 
@@ -36,6 +43,9 @@
          {
              rigidbody.freezeRotation = true;
          }
+
+        topY = target.position.y + maxPanY;
+        bottomY = target.position.y - maxPanY;
      }
   
      void LateUpdate () 
@@ -63,8 +73,8 @@
              transform.rotation = rotation;
              transform.position = position;
          }
-         if (Input.GetMouseButton(0)) 
-         {
+        if (Input.GetMouseButton(0)) 
+        {
              x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
              y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
   
@@ -77,6 +87,7 @@
              RaycastHit hit;
              if (Physics.Linecast (target.position, transform.position, out hit)) 
              {
+             
                  distance -=  hit.distance;
              }
              Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
@@ -84,7 +95,20 @@
   
              transform.rotation = rotation;
              transform.position = position;
-         }
+        }
+        if(Input.GetMouseButton(1))
+        {
+            delY = Input.GetAxis("Mouse Y") * ySpeed * 0.002f;
+
+            //Vector3 position = new Vector3(transform.position.x, newY, transform.position.z);
+            //transform.position = position;
+
+            Vector3 move = new Vector3(0, delY, 0);
+            target.Translate(move);
+
+            newY = Mathf.Clamp(target.position.y, bottomY, topY);
+            target.position = new Vector3(target.position.x, newY, target.position.z);
+        }
      }
   
      public static float ClampAngle(float angle, float min, float max)

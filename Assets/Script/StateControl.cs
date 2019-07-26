@@ -27,4 +27,9 @@ public class StateControl : MonoBehaviour
     {
         m_Animator.SetBool("Prev", true);
     }
+
+    public void Reset()
+    {
+        m_Animator.Play("Start", 0, 0f);
+    }
 }
