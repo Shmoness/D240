@@ -86,34 +86,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ef9349a9f304246b283fe679f1f268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1102 &-8956219303080965490
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: BLEND_White Cube Start 0
-  m_Speed: -1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours:
-  - {fileID: -7250038200694665444}
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 1989289236423521904, guid: c14995a82d3fe4c42a624d6d7d025296,
-    type: 3}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1102 &-8570636649347649131
 AnimatorState:
   serializedVersion: 5
@@ -399,18 +371,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!114 &-7250038200694665444
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12ef9349a9f304246b283fe679f1f268, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1101 &-7054320990503109774
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -443,7 +403,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BLEND_R+ B Wire Start
+  m_Name: BLEND_R + B Wire Start
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2291,7 +2251,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BLEND_Flim Peel Start
+  m_Name: BLEND_Film Peel Start
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2752,9 +2712,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 3326283639957920942}
     m_Position: {x: 10, y: 40, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -8956219303080965490}
-    m_Position: {x: 170, y: -30, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
