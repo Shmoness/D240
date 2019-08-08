@@ -17,11 +17,11 @@
      public float distanceMin = 1f;
      public float distanceMax = 10f;
 
-     public float maxPanY;
-     
-     private Rigidbody rigidbody;
-  
-     float x = 0.0f;
+    public float maxPanY;
+
+    private new Rigidbody rigidbody;
+
+    float x = 0.0f;
      float y = 0.0f;
 
      float delY = 0.0f;
