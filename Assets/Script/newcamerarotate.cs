@@ -51,10 +51,12 @@
      void LateUpdate () 
      {
         //float scrollwheel = Input.GetAxis("Mouse ScrollWheel");
- 
+
         //zoom with scroll wheel; forward to zoom in, backward to scroll out.
         //transform.Translate(0, -scrollwheel * zoom_speed, scrollwheel * zoom_speed, Space.World);
         //distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel")*5, distanceMin, distanceMax);
+
+        //Zoom scroll wheel, allows right click pan to work
         if (target) 
          {
   
@@ -65,16 +67,20 @@
              RaycastHit hit;
              if (Physics.Linecast (target.position, transform.position, out hit)) 
              {
-                 distance -=  hit.distance;
+             //    distance -=  hit.distance;
              }
              Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
              Vector3 position = rotation * negDistance + target.position;
   
              transform.rotation = rotation;
              transform.position = position;
+             
          }
+
+        //Rotate around, left click
         if (Input.GetMouseButton(0)) 
         {
+            
              x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
              y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
   
@@ -86,16 +92,18 @@
   
              RaycastHit hit;
              if (Physics.Linecast (target.position, transform.position, out hit)) 
-             {
-             
-                 distance -=  hit.distance;
+             {      
+             //    distance -=  hit.distance;
              }
              Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
              Vector3 position = rotation * negDistance + target.position;
   
              transform.rotation = rotation;
              transform.position = position;
+             
         }
+
+        //Right click, camera pan
         if(Input.GetMouseButton(1))
         {
             delY = Input.GetAxis("Mouse Y") * ySpeed * 0.002f;
@@ -107,7 +115,7 @@
             target.Translate(move);
 
             newY = Mathf.Clamp(target.position.y, bottomY, topY);
-            target.position = new Vector3(target.position.x, newY, target.position.z);
+            target.position = new Vector3(target.position.x, newY, target.position.z);           
         }
      }
   
